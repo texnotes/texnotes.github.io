@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Slider</title>
+	<link rel="stylesheet" href="css/slider.css">
+	<script src="js/jquery-1.11.0.min.js"></script>		
+	<script src="js/slider.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<h1>Слайдер</h1>
+	<p>Реализация класса Slider. Слайдер состоит из фиксированного количества слайдов (4шт), изображения имеют одинаковый заранее известный размер.
+	Переход между слайдами анимирован. При клике на плашку слева происходит переход к соответствующему слайдеру, соответствие определяется порядком. 
+	Верхняя плашка - первый слайд, вторая сверху - второй, итд.</p> 
+	<p>Сразу же после инициализации у слайдера включается режим автопрокрутки: показ следующего слайда каждые 2 секунды. 
+	Если пользователь кликнул на одну из плашек, перейдя к слайду, автопрокрутка отключается. Автопрокрутка включается через 5 секунд после последнего клика пользователя по плашке.
+	Автопрокрутка циклическая: с последнего слайда происходит переход к первому. На странице можно разместить несколько слайдеров.</p>
+	<div class="justSlider">
+
+	<ul class="controlsNav">
+		<li class="navSlide1 selected"></li>	
+		<li class="navSlide2"></li>	
+		<li class="navSlide3"></li>	
+		<li class="navSlide4"></li>	
+	</ul>
+<div class="containerImg">
+		<ul class="sliderImg">
+		<li><img alt="" src="img/image1.jpg"></li>	
+		<li><img alt="" src="img/image2.jpg"></li>	
+		<li><img alt="" src="img/image3.jpg"></li>	
+		<li><img alt="" src="img/image4.jpg"></li>	
+	</ul></div>
+</div>
+	
+</body>
+</html>

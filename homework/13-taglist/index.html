@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Работа с тегами</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/taglist.js"></script>
+</head>
+<body>
+	<div class="container">
+	<br />
+			<div class="row">
+			<div class="col-xs-6">
+			
+			<h3>Тестирование класса "TagList".</h3>
+			<p><i>Пример инициализации:</i></p>
+			<p>var el = makeTagList(document.querySelector('.widget'),['Первый', 'Второй', 'Третий', 'Последний']);</p>
+			<p><i>Вызов функции, возвращающей теги: </i>el.getTagList();</p>
+			<p>В режиме редактирования можно добавлять и удалять теги. Добавлять уже существующие теги нельзя.</p>
+			<h4>Для теста создается два независимых виджита: <br />пустой и с предопределенными тегами</h4>
+
+	<div class="widget"></div>
+	</div>
+	<script>
+		makeTagList(document.querySelector('.widget'));
+		makeTagList(document.querySelector('.widget'),['Первый', 'Второй', 'Третий', 'Последний']);
+	</script>
+</body>
+</html>

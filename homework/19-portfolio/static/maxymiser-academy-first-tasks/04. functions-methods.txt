@@ -1,0 +1,8 @@
+Название папки 04-functions-arguments
+Сдать до утра субботы (8 00, 12.28)
+
+http://courses.dmitrypodgorniy.com/task/is-in-array/
+http://courses.dmitrypodgorniy.com/task/extend-object/
+http://courses.dmitrypodgorniy.com/task/every/
+http://courses.dmitrypodgorniy.com/task/summator/
+http://courses.dmitrypodgorniy.com/task/query-string-to-object/

@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Паттерн-модуль</title>
+	<link rel="stylesheet" href="main/css/bootstrap.min.css">
+	<link rel="stylesheet" href="slider/css/slider.css">	
+	<link rel="stylesheet" href="zoomer/css/zoomer.css">
+	<link rel="stylesheet" href="timing/css/main.css">
+	<script src="main/js/jquery-1.11.0.min.js"></script>
+	<script src="slider/js/slider.js"></script>
+	<script src="zoomer/js/zoomer.js"></script>	
+	<script src="timing/js/stopwatch.js"></script>
+	<script src="main/js/main.js"></script>
+
+	
+	<style>
+		.description p {
+			font-size: 1.25em;
+			line-height: 150%;
+			margin-bottom: 1em;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Слайдер</h1>
+	<p>Реализация класса Slider. Слайдер состоит из фиксированного количества слайдов (4шт), изображения имеют одинаковый заранее известный размер.
+	Переход между слайдами анимирован. При клике на плашку слева происходит переход к соответствующему слайдеру, соответствие определяется порядком. 
+	Верхняя плашка - первый слайд, вторая сверху - второй, итд.</p> 
+	
+<div class="justSlider">
+
+	<ul class="controlsNav">
+		<li class="navSlide1 selected"></li>	
+		<li class="navSlide2"></li>	
+		<li class="navSlide3"></li>	
+		<li class="navSlide4"></li>	
+	</ul>
+<div class="containerImg">
+		<ul class="sliderImg">
+		<li><img alt="" src="slider/img/image1.jpg"></li>	
+		<li><img alt="" src="slider/img/image2.jpg"></li>	
+		<li><img alt="" src="slider/img/image3.jpg"></li>	
+		<li><img alt="" src="slider/img/image4.jpg"></li>	
+	</ul></div>
+</div>
+
+	<h1>Набор фоток номер один</h1>
+	<div class="gallery-1">
+		<img src="zoomer/img/small/birds.jpg" alt="">
+		<img src="zoomer/img/small/dog.jpg" alt="">
+	</div>
+
+	<h1>Набор фоток номер два</h1>
+	<div class="gallery-2">
+		<img src="zoomer/img/small/goats.jpg" alt="">
+		<img src="zoomer/img/small/hedgehog.jpg" alt="">
+		<img src="zoomer/img/small/pigeon.jpg" alt="">
+	</div>
+	
+	
+	<div class="container">
+
+			<div class="row">
+			<div class="col-xs-4">
+				<h2 class="stopwatch-current">00:00:00:000</h2>
+				<div class="stopwatch-laps">
+				</div>
+			</div>
+			<div class="col-xs-4 stopwatch-controls">
+				<div class="btn-group btn-group-lg">
+					<button class="btn btn-primary">Start</button>
+					<button class="btn btn-info">Lap</button>
+				</div>
+				<button class="btn btn-danger btn-sm">Reset</button>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

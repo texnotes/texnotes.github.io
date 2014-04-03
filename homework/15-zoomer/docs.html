@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>zoomer.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docs/docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>zoomer.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makeZoomable</span><span class="hljs-params">(node)</span> {</span>
+<span class="hljs-pi">	'use strict'</span>;
+	
+	<span class="hljs-keyword">var</span> ZOOM_BTN_WIDTH = <span class="hljs-number">42</span>; <span class="hljs-comment">//Ширина картинки закрытия "Х"</span>
+
+	$(document).ready(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span><span class="hljs-comment">//Перестраховка на случай, если еще не создан DOM</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>Добавляем в DOM компоненты lightbox (только один раз)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		<span class="hljs-keyword">if</span> (!$(<span class="hljs-string">".underlay"</span>).length) {
+			<span class="hljs-keyword">var</span> $newdiv1 = $(<span class="hljs-string">'&lt;div class="underlay"&gt;&lt;/div&gt;'</span>);
+			<span class="hljs-keyword">var</span> $newdiv2 = $(<span class="hljs-string">'&lt;div class="lightbox"&gt;&lt;img class="zoom_img" src="#"&gt;&lt;img class="zoom_btn" src="img/close_button.png"&gt;&lt;/div&gt;'</span>);
+			$(<span class="hljs-string">"body"</span>).append($newdiv1, $newdiv2);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>Навешиваем обработчик события на нажатие кнопки “Х”</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$(<span class="hljs-string">'.zoom_btn'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+				closeLightbox();
+			});
+		}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>Дя всех изображений из узла node навешиваем обработчик события - клик мышки</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		$(node).find(<span class="hljs-string">'img'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+			<span class="hljs-keyword">var</span> imageSrc = <span class="hljs-keyword">this</span>.src.replace(<span class="hljs-string">'small'</span>, <span class="hljs-string">'large'</span>);<span class="hljs-comment">//Меняем каталог превьющек на увеличенные изображения</span>
+			$(<span class="hljs-string">'.underlay'</span>).show();
+			$(<span class="hljs-string">'.lightbox .zoom_img'</span>).attr(<span class="hljs-string">"src"</span>, imageSrc);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Колбэк для показа увеличиного изображения</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			$(<span class="hljs-string">'.lightbox'</span>).show(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+				$(<span class="hljs-string">'.lightbox .zoom_btn'</span>).show();<span class="hljs-comment">//Решает проблему с "прыжком" кнопки "Х" из предыдущей позиции</span>
+				zoomBtnPosition();
+			});
+		});
+	});</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>Обработчик события на изменение размера браузера</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	$(window).resize(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+		zoomBtnPosition();
+	});</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Скрытие lightbox</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">closeLightbox</span><span class="hljs-params">()</span> {</span>
+		$(<span class="hljs-string">'.lightbox .zoom_btn'</span>).hide();<span class="hljs-comment">//Решает проблему с "прыжком" кнопки "Х" из предыдущей позиции</span>
+		$(<span class="hljs-string">'.lightbox'</span>).hide();
+		$(<span class="hljs-string">'.underlay'</span>).hide();
+	}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>Пересчет позиции кнопки “Х”</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">zoomBtnPosition</span><span class="hljs-params">()</span> {</span>
+		<span class="hljs-keyword">var</span> position = $(<span class="hljs-string">'.lightbox .zoom_img'</span>).offset();
+		position.left = position.left + $(<span class="hljs-string">'.lightbox .zoom_img'</span>).width() - ZOOM_BTN_WIDTH;
+		$(<span class="hljs-string">'.lightbox .zoom_btn'</span>).offset(position);
+	}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Обработчик события нажатия на кнопку “Esc”. Делегируем событие на весь документ</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	$(document).keyup(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(e)</span> {</span>
+		<span class="hljs-keyword">if</span> (e.keyCode == <span class="hljs-number">27</span>) {
+			<span class="hljs-keyword">if</span> ($(<span class="hljs-string">'.underlay'</span>)) {
+				closeLightbox();
+			}
+		}
+	});
+}</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

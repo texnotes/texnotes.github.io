@@ -1,0 +1,57 @@
+
+   {
+      "Homework_01": {
+          "Name":  "Ознакомление с синтаксисом и работа с переменными",
+          "Path":  "js-intro",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["script01.js", "script02.js"]
+          }
+        },
+		
+      "Homework_02": {
+          "Name":  "Проверка условий",
+          "Path":  "02-if-else",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["script01.js", "script02.js"]
+          }
+        },
+
+      "Homework_03": {
+          "Name":  "Циклы, массивы и понятие объекта",
+          "Path":  "03-objects-arrays-loops",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["script01.js", "script02.js"]
+          }
+	  },
+
+      "Homework_04": {
+          "Name":  "Функции",
+          "Path":  "04-functions-arguments",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["script01.js", "script02.js"]
+          }
+        },
+
+      "Homework_05": {
+          "Name":  "Замыкания",
+          "Path":  "05-functions-closures",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["script01.js", "script02.js"]
+          }
+        },
+		
+      "Homework_06": {
+          "Name":  "ООП: прототипы",
+          "Path":  "07-inheritance",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["script01.js", "script02.js"]
+          }
+        }
+		
+   }

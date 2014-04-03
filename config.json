@@ -1,0 +1,117 @@
+   [{
+      "Homework": "Cинтаксис, ветвление, массивы и понятие объекта. Функции, области видимости и замыкания",
+          "Path":  "homework/js-intro",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["guess.js", "tests.js", "implementation.js"],
+			  "Runtime":		["guess();", ""]
+          }
+        },
+		{
+      "Homework": "Наследование. Начало работы с DOM",
+          "Path":  "homework/07-inheritance",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["counter.js", "createMediator.js", "next.js"]
+          }
+        },
+		{
+      "Homework": "DOM-события",
+          "Path":  "homework/09-zoomer",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["demo.js", "realise/index.html","zoomer.js"],
+			  "Runtime":		["makeZoomable(document.querySelector('.gallery-1')); makeZoomable(document.querySelector('.gallery-2'));", "", ""]
+          }
+        },
+		{
+      "Homework": "Регулярные выражения",
+          "Path":  "homework/10-validation",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["validate.js"]
+          }
+        },
+		{
+      "Homework": "Таймеры",
+          "Path":  "homework/11-timing",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["demo.js","stopwatch.js"],
+			  "Runtime":		["makeStopwatch(document.getElementsByClassName('container'));", ""]
+          }
+        },
+		{
+      "Homework": "Делегирование",
+          "Path":  "homework/12-event-delegation",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["app.js"]
+          }
+        },
+		{
+      "Homework": "Ошибки, обработка ошибок, отладка",
+          "Path":  "homework/13-taglist",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["taglist.js"]
+          }
+        },
+		{
+      "Homework": "Библиотеки, фреймворки, обзор. Хранение данных на клиенте",
+          "Path":  "homework/15-zoomer",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["zoomer.js"]
+          }
+        },
+		{
+      "Homework": "Анимации",
+          "Path":  "homework/16-slider",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["demo.js", "main.js", "js/slider.js", "css/slider.css"],
+			  "Runtime":		["var justSlider = new Slider('.justSlider'); window.sld = justSlider;", "", "", ""]
+          }
+        },
+		{
+      "Homework": "AJAX",
+          "Path":  "homework/18-ajax",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["validate.js", "web_request.js"]
+          }
+        },
+		{
+      "Homework": "Портфолио",
+          "Path":  "homework/19-portfolio",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["main.js", "portfolio.js"]
+          }
+        },
+		{
+      "Homework": "Портфолио",
+          "Path":  "homework/20-portfolio",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["main.js", "portfolio.js"]
+          }
+        },
+		{
+      "Homework": "Паттерны программирования",
+          "Path":  "homework/21-patterns",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["main.js"]
+          }
+        },
+		{
+      "Homework": "jQuery расширения",
+          "Path":  "homework/22-tabable",
+          "Files": {
+              "Description":    "about.md",
+              "Code":  			["tabable.js"]
+          }
+        }
+   ]
