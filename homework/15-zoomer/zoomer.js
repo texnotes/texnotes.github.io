@@ -8,7 +8,7 @@ function makeZoomable(node) {
 //Добавляем в DOM компоненты lightbox (только один раз)
 		if (!$(".underlay").length) {
 			var $newdiv1 = $('<div class="underlay"></div>');
-			var $newdiv2 = $('<div class="lightbox"><img class="zoom_img" src="#"><img class="zoom_btn" src="img/close_button.png"></div>');
+			var $newdiv2 = $('<div class="lightbox"><img class="zoom_img" src="#"><img class="zoom_btn" src="homework/15-zoomer/img/close_button.png"></div>');
 			$("body").append($newdiv1, $newdiv2);
 //Навешиваем обработчик события на нажатие кнопки "Х"
 			$('.zoom_btn').click(function () {

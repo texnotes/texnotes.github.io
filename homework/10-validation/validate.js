@@ -1,6 +1,6 @@
 var globalEmailList = ['author@mail.com', 'foo@mail.com', 'tester@mail.com'];
 
-(function (){
+function valitdate(){
 	'use strict';
 
 	/**
@@ -173,4 +173,4 @@ var globalEmailList = ['author@mail.com', 'foo@mail.com', 'tester@mail.com'];
 		}
 		return true;
 	}
-});
+};

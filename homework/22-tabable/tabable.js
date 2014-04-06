@@ -14,13 +14,13 @@
 	}
 
 	Tabable.prototype.init = function (selector) {
-		this.el.find("> "+selector).addClass("nav nav-tabs");//Инициализация классов табов
+		this.el.find("> "+selector).addClass("nav nav-tabs");//РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РєР»Р°СЃСЃРѕРІ С‚Р°Р±РѕРІ
 		this.el.find("> "+selector+" :first").addClass("active");
-		this.tabShownMAX = this.el.find("> "+TAB_SELECTOR+" > *").length - 1;//Определение количества табов
-		this.el.find("> "+TAB_CONTENT+" > "+TAB_CONTENT_SELECTOR+":first").addClass("active");//Инициализация контента табов
+		this.tabShownMAX = this.el.find("> "+TAB_SELECTOR+" > *").length - 1;//РћРїСЂРµРґРµР»РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° С‚Р°Р±РѕРІ
+		this.el.find("> "+TAB_CONTENT+" > "+TAB_CONTENT_SELECTOR+":first").addClass("active");//РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РєРѕРЅС‚РµРЅС‚Р° С‚Р°Р±РѕРІ
 		this.el.trigger('tabable-init', selector);
 		this.el.trigger('tabable-tab-shown', this.tabShown);
-		//Обработчик события по нажатию на табы (делегирование)
+		//РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РїРѕ РЅР°Р¶Р°С‚РёСЋ РЅР° С‚Р°Р±С‹ (РґРµР»РµРіРёСЂРѕРІР°РЅРёРµ)
 		this.el.find("> "+selector).on('click', $.proxy(function(event) {
 		var clickElm = $(event.target);
 		if (clickElm.hasClass( 'nav' )) return;
@@ -33,10 +33,10 @@
 
 	Tabable.prototype.show = function(index) {
 		if (index===this.tabShown || index > this.tabShownMAX || index < 0) return;
-		//Установка активного таба (старый убирается автоматом - тот у которого был раньше класс active)
+		//РЈСЃС‚Р°РЅРѕРІРєР° Р°РєС‚РёРІРЅРѕРіРѕ С‚Р°Р±Р° (СЃС‚Р°СЂС‹Р№ СѓР±РёСЂР°РµС‚СЃСЏ Р°РІС‚РѕРјР°С‚РѕРј - С‚РѕС‚ Сѓ РєРѕС‚РѕСЂРѕРіРѕ Р±С‹Р» СЂР°РЅСЊС€Рµ РєР»Р°СЃСЃ active)
 		this.el.find("> "+TAB_SELECTOR+" > .active").removeClass("active");
 		this.el.find("> "+TAB_SELECTOR+" > *").eq(index).addClass("active");
-		//Аналогично показывается контент для выбранного таба
+		//РђРЅР°Р»РѕРіРёС‡РЅРѕ РїРѕРєР°Р·С‹РІР°РµС‚СЃСЏ РєРѕРЅС‚РµРЅС‚ РґР»СЏ РІС‹Р±СЂР°РЅРЅРѕРіРѕ С‚Р°Р±Р°
 		this.el.find("> "+TAB_CONTENT+" > .active").removeClass("active");
 		this.el.find("> "+TAB_CONTENT+" > *").eq(index).addClass("active");
 	
@@ -45,15 +45,15 @@
 	}
 	
 	Tabable.prototype.destroy = function() {
-		//Удаляем класс active для табов и контента
+		//РЈРґР°Р»СЏРµРј РєР»Р°СЃСЃ active РґР»СЏ С‚Р°Р±РѕРІ Рё РєРѕРЅС‚РµРЅС‚Р°
 		this.el.find("> "+TAB_SELECTOR+" > .active").removeClass("active");
 		this.el.find("> "+TAB_CONTENT+" > .active").removeClass("active");
-		//Удаление классов для табов 
+		//РЈРґР°Р»РµРЅРёРµ РєР»Р°СЃСЃРѕРІ РґР»СЏ С‚Р°Р±РѕРІ 
 		this.el.find("> "+TAB_SELECTOR).removeClass("nav");
 		this.el.find("> "+TAB_SELECTOR).removeClass("nav-tabs");
-		//Отключаем обработчик события по клику на табе
+		//РћС‚РєР»СЋС‡Р°РµРј РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РїРѕ РєР»РёРєСѓ РЅР° С‚Р°Р±Рµ
 		this.el.find("> "+TAB_SELECTOR).off("click");
-		//Отключаем кастомные события
+		//РћС‚РєР»СЋС‡Р°РµРј РєР°СЃС‚РѕРјРЅС‹Рµ СЃРѕР±С‹С‚РёСЏ
 		$(document).off('tabable-init');
 		$(document).off('tabable-tab-shown');
 	}
@@ -74,10 +74,10 @@
 	
 }(jQuery));
 
-$(document).ready(function () {
-	$('.tabable').tabable();
-	//Тестирование методов плагина
+//$(document).ready(function () {
+//	$('.tabable').tabable();
+	//РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ РјРµС‚РѕРґРѕРІ РїР»Р°РіРёРЅР°
 	//$('.tabable').tabable().show(1);
 	//$('.tabable').tabable().destroy();
-});
+//});
 

@@ -74,7 +74,7 @@
           "Path":  "homework/18-ajax",
           "Files": {
               "Description":    "about.md",
-              "Code":  			["web_request.js","/portfolio/js/main.js", "/portfolio/js/portfolio.js", "/portfolio/css/main.css"]
+              "Code":  			["web_request.js"]
           }
         },
 		{
@@ -82,8 +82,7 @@
           "Path":  "homework/22-tabable",
           "Files": {
               "Description":    "about.md",
-              "Code":  			["demo.js", "tabable.js"],
-			  "Runtime":		["$('.tabable').tabable();", ""]
-		  }
+              "Code":  			["tabable.js"]
+          }
         }
    ]

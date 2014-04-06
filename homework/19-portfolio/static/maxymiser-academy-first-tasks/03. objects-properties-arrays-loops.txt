@@ -1,9 +1,0 @@
-Название папки: 03-objects-arrays-loops
-
-Описание можно найти по адресам. Там же можно проверить качество реализации с точки зрения ожидаемого результата. Система работает в тестовом режиме, пишите на форум при любой, как вам кажется, поломке.
-
-http://courses.dmitrypodgorniy.com/task/contains/
-http://courses.dmitrypodgorniy.com/task/extracting-odd-elements-from-array/
-http://courses.dmitrypodgorniy.com/task/object-from-arrays/
-http://courses.dmitrypodgorniy.com/task/to-matrix/
-http://courses.dmitrypodgorniy.com/task/to-query-string-from-object/

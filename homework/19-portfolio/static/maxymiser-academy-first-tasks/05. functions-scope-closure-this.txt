@@ -1,8 +1,0 @@
-Название папки 05-functions-closures
-Сдать до утра субботы (8 00, 01.04)
-
-http://courses.dmitrypodgorniy.com/task/unique/
-http://courses.dmitrypodgorniy.com/task/create-caching-function/
-http://courses.dmitrypodgorniy.com/task/keeper/
-http://courses.dmitrypodgorniy.com/task/incapsulated-counter/
-http://learn.javascript.ru/task/armiya-funkcij
